@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+## 演示
+
 ## 项目在线demo(移动端)
 http://kimy.coding.me/vue-assistant/#/
 

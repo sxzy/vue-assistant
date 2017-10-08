@@ -72,7 +72,6 @@ export default {
     return {
       mypart: '哈哈哈',
       newTask: '',   // 当前要增加的任务项目名称
-      testtask: ['ssss', 'ssss', 'www'],
       todoTask: [], // 待完成的项目名称
       doneTask: [], // 已经完成的项目名称。
       editId: '', // 当前被编辑的项目的名称
@@ -123,12 +122,10 @@ export default {
     },
     clearEditId () {
       this.editId = ''
-      console.log('我已经离开了失去了')
     },
     setDone (index) {
       this.doneTask.push(this.todoTask[index])
       this.todoTask.splice(index, 1)
-      console.log(index, '这是被带年纪的')
     },
     // kimmy: 这里应该允许回退操作
     cancelDone (index) {
