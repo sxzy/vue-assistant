@@ -52,7 +52,9 @@ export default {
   },
   mounted () {
     this.$refs.barPart.style.left = -this.$refs.barPart.offsetWidth + 'px'   // 初始化通过left值来隐藏侧边栏组件
-    this.$on('closeByRoute', this.toggleShow)
+    this.$on('closeByRoute', () => {
+      this.$emit('update:myVisible', !this.myVisible)
+    })
   }
 }
 </script>

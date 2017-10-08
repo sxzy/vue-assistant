@@ -104,25 +104,25 @@ export default {
           .leftCircle {
             margin: 0 auto;
             position: absolute;
-            width: 9.5rem;
-            height: 9.5rem;
-            border: 1.25rem solid #DE7C23;
+            width: 9rem;
+            height: 9rem;
+            border: 1.5rem solid #DE7C23;
             border-radius: 50%;
-            clip: rect(0, 7rem, 14rem, 0);
+            clip: rect(0, 6rem, 12rem, 0);
             left: 50%;
             margin-left: -6rem;
           }
           .topCircle {
             margin: 0 auto;
-            clip: rect(0, 5.75rem,9.55rem, 0);
-            margin-left:-4.75rem;
+            clip: rect(0, 4.5rem, 9rem, 0);
+            margin-left:-4.5rem;
             position: absolute;
-            width: 7rem;
-            height: 7rem;
+            width: 6rem;
+            height: 6rem;
             left: 50%;
-            border: 1.25rem solid #E7A060;
+            border: 1.5rem solid #E7A060;
             border-radius: 50%;
-            margin-top:1.25rem;
+            margin-top:1.5rem;
             transform: rotate(90deg);
           }
           .infoText {
@@ -167,7 +167,7 @@ export default {
           color: #fff;
           text-align: center;
           line-height: 4rem;
-          font-size: 2rem;
+          font-size: 1.4rem;
          }   
          .no {
           float:right;
@@ -179,7 +179,7 @@ export default {
           // color: #fff;
           text-align: center;
           line-height: calc(4rem - 2px);
-          font-size: 2rem;
+          font-size: 1.4rem;
          } 
         }
     }

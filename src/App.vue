@@ -3,7 +3,8 @@
     <!-- 仔细想想，加载动画应该是一个全局的东西哦 -->
     <mt-spinner class="g-loading" type="double-bounce" v-show="loading" :color="loadingColor"></mt-spinner>
     <app-header>
-      <mt-button icon="back" @click="toggleShowMenu">back</mt-button>
+      <i class="iconfont icon-menu" @click="toggleShowMenu"></i>
+      <!-- <mt-button icon="back" @click="toggleShowMenu">back</mt-button> -->
     </app-header>
     <!-- 侧边栏 -->
       <my-menu :my-visible.sync = "visible">
@@ -16,9 +17,9 @@
       <menu-item route='/memo'><i slot='icon'  class=' iconfont icon-beiwanglu'></i>备忘录</menu-item>
       <menu-item route='/when'><i slot='icon'  class=' iconfont icon-fangjia'></i>什么时候放假</menu-item>
       <menu-item route='/icon'><i slot='icon'  class=' iconfont icon-pinrenpinkongxin'></i>抛硬币</menu-item>
-      <menu-item route='/mirror'><i slot='icon'  class=' iconfont icon-jingzi'></i>照镜子</menu-item>   
+      <!-- <menu-item route='/mirror'><i slot='icon'  class=' iconfont icon-jingzi'></i>照镜子</menu-item>  -->
       <my-submenu>
-        <i slot="icon" class=' iconfont icon-jizhang'></i><template slot="submenu-title"></i>记账</template>
+        <i slot="icon" class=' iconfont icon-jizhang'></i><template slot="submenu-title"></i>记记账</template>
         <menu-item route='/money'><i slot="icon" class=' fa fa-circle-o'></i>记账首页</menu-item>
         <menu-item route='/moneyRecord'><i slot="icon" class='fa fa-circle-o'></i>添加记账</menu-item>
         <my-submenu>
@@ -81,6 +82,7 @@ export default {
   methods: {
     // 打开侧边栏
     toggleShowMenu () {
+      console.log('我被点了')
       this.visible = true
     },
     setTheme () {

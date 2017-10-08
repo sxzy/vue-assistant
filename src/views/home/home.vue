@@ -5,13 +5,13 @@
        <div class="head-field">
          <span class="head-field-pic" @click="JumpInfo">
          <span class="img-hover">
-            <img :src="userinfo.headUrl" v-autofix/>
+            <img :src="userinfo.headUrl" v-autofix="name"/>
           </span>
         </span>
        </div>
 
        <div class="grid">
-          <div class="grid-item" @click="jumpTo('DatePlan')"><i class="icon iconfont icon-rili" ></i><br><span class="grid-item-text">dataplan333</span>
+          <div class="grid-item" @click="jumpTo('DatePlan')"><i class="icon iconfont icon-rili" ></i><br><span class="grid-item-text">dataplan</span>
          </div><div class="grid-item" @click="jumpTo('EatWhat')"><i class="icon iconfont icon-fan " ></i><br><span class="grid-item-text">今天吃什么</span>
          </div><div class="grid-item" @click="jumpTo('memo')"><i class="icon iconfont icon-beiwanglu " ></i><br><span class="grid-item-text">备忘录</span>
          </div><div class="grid-item" @click="jumpTo('when')"><i class="icon iconfont icon-shiliangzhinengduixiang9 " ></i><br><span class="grid-item-text">什么时候放假</span>
@@ -44,6 +44,11 @@ export default {
     }
   },
   created () {
+    // 解决从浏览器回退触发不了指令的问题
+    this.name = 'trigger'
+    setTimeout(() => {
+      this.name = 'kimmy'
+    }, 0)
   },
   watch: {
     // 设置颜色页面就在该view下, 因而改变颜色这里也需要监听

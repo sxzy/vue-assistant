@@ -66,7 +66,7 @@ export default {
       if (con === true) {
         this.lockRandom = true
         console.log('in', this.lockRandom)
-        this.doingText = '目测中'
+        this.doingText = '纠结中'
         this.loadingText()
         var timer = setInterval(this.add, 100)
         setTimeout(() => {
@@ -131,17 +131,17 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
     .EatWhat {
         .headerPart {
-            padding: 4rem 0;
+            padding-bottom: 2rem;
             color: red;
             text-align: center;
             .myTitle {
                 color: #3cc51f;
-                font-size: 34px;
+                font-size: 3.2rem;
                 font-weight: 400;
             }
             .info {
                 color: gray;
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
         }
         .active {

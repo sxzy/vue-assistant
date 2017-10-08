@@ -2,7 +2,10 @@
   <div class="DatePlan">
      <div class="headerPart">
          <h1 class="myTitle">今天做点什么</h1> 
-         <p><input class="info textPart" placeholder="好好学习，天天向上啊喂~" v-model="newTask" ></input><span class="add_icon" @click="addTask">+</span></p>
+         <p style="text-align:left;margin-top: 15px;"><input class="info textPart" placeholder="好好学习，天天向上啊喂~" v-model="newTask" ></input>
+         <i class="add_icon iconfont icon-icon02" @click="addTask"></i>
+         <!-- <span class="add_icon" @click="addTask">+</span> -->
+         </p>
       </div>
       <div class="todo">
           <div class="weui-cells__title">TODOLIST</div>
@@ -21,7 +24,7 @@
           <div class="weui-cells__title">DONELIST</div>
           <div class="weui-cells">
             <div class="weui-cell" v-for="(task, index) in doneTask" :key=task>
-                <div class="weui-cell__hd"> <i class="weui-icon-success"></i></div>
+                <div class="weui-cell__hd"> <i class="weui-icon-success" @click="cancelDone(index)"></i></div>
                 <div class="weui-cell__bd">
                     <p>
                     <span class="doneTag">{{task}}</span>
@@ -127,6 +130,11 @@ export default {
       this.todoTask.splice(index, 1)
       console.log(index, '这是被带年纪的')
     },
+    // kimmy: 这里应该允许回退操作
+    cancelDone (index) {
+      this.todoTask.push(this.doneTask[index])
+      this.doneTask.splice(index, 1)
+    },
     deletetask (index) {
       this.doneTask.splice(index, 1)
     },
@@ -162,7 +170,7 @@ export default {
       // 绑定设置主题的事件，一旦触发修改主题，则将当前字体颜色改为对应颜色
       this.$el.querySelector('.myTitle').style.color = this.userinfo.color
       this.$el.querySelector('.weui-btn_primary').style.backgroundColor = this.userinfo.color
-      this.$el.querySelector('.add_icon').style.backgroundColor = this.userinfo.color
+      this.$el.querySelector('.add_icon').style.color = this.userinfo.color
     })
   }
 }
@@ -170,12 +178,12 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
     .DatePlan {
         .headerPart {
-            padding: 4rem 0;
+           padding-bottom: 2rem;
             color: red;
             text-align: center;
             .myTitle {
                 color: #3cc51f;
-                font-size: 34px;
+                font-size: 3.2rem;
                 font-weight: 400;
             }
             .info {
@@ -183,29 +191,22 @@ export default {
                 font-size: 1.7rem;
             }
             .textPart {
+               margin-left: 15px;
                 border: none;
                 border-bottom: 1px solid gray;
-                height: 40px;
-                line-height: 40px;
-                margin:0 10px 5px 0;
+                height: 32px;
+                line-height: 32px;
+                // margin:0 10px 5px 0;
                 outline: none;
                 width: 80%;
-                text-align: center;
             }
         }
-        .add_icon {
-          display: inline-block;
-          // border: 1px solid #3cc51f;
-          width: 1.7rem;
-          height: 1.7rem;
-          line-height: 1.25rem;
-          border-radius: 50%;
-          vertical-align: middle;
-         text-align: center;
-         cursor: pointer;
-         color: white;
-         font-size: 2rem;
-         background: #3cc51f;
+        .add_icon {    
+         font-size: 2.6rem;
+         position: absolute;
+         right: 17px;
+         line-height: 32px;
+        
         }
         .doneTag {
             text-decoration: line-through;

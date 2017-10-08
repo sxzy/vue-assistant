@@ -45,6 +45,7 @@ export default {
   }
   .dropdown-list {
     position: absolute;
+    z-index: 999;
     padding: 0;
     margin: 0;
     left: -110px;

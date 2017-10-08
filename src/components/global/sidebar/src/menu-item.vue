@@ -1,6 +1,6 @@
 <template>
     <li >
-        <router-link href="#" style='color:white' :to='route' @click.native='handleRoute'>
+        <router-link href="#" style='color:white' :to='route' @click.native.stop='handleRoute'>
           <slot name='icon'></slot>
           <span class='menutitle'><slot></slot></span></router-link>
       </li>

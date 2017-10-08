@@ -9,7 +9,7 @@
             <div class="weui-cell weui-cell_access" v-for="(memo,index) in memos" :key=memo @click=showDialog(index)>
                 <div class="weui-cell__bd">{{memo}}</div>
                 <div class="weui-cell__ft" style="font-size: 0">
-                    <span class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></span>
+                    <!-- <span class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></span> -->
                 </div>
             </div>
         </div>
@@ -83,12 +83,12 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
     .memo {
         .headerPart {
-            padding: 4rem 0;
+            padding-bottom: 2rem;
             color: red;
             text-align: center;
             .myTitle {
                 color: #3cc51f;
-                font-size: 3.6rem;
+                font-size: 3.2rem;
                 font-weight: 400;
             }
             .info {

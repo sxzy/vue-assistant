@@ -9,7 +9,7 @@ export default {
       bind (el, binding, vnode) {
       },
       update (el, binding, vnode) {
-        console.log('carry')
+        console.log('carry', binding)
         let img = new Image()
         let boxWidth = el.parentNode.offsetWidth
         img.onload = () => {

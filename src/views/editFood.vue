@@ -14,6 +14,7 @@
 <script>
 // import Bus from '@/services/bus'
 export default {
+  props: ['userinfo'],
   data () {
     return {
       editFood: '',
@@ -49,6 +50,12 @@ export default {
     //   console.log(this.editFood, '这是2')
     // })
     // console.log(this.editFood, 'hahahkkak卡卡')
+    this.$nextTick(() => {
+      // 设置颜色
+      this.$el.querySelector('.myTitle').style.color = this.userinfo.color
+      this.$el.querySelector('.weui-btn_primary').style.background = this.userinfo.color
+      this.$el.querySelector('.editPart input').style.borderColor = this.userinfo.color
+    })
   }
 }
 </script>
