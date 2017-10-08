@@ -1,0 +1,19 @@
+@import './mixin.scss';
+/* 设置几个主题颜色 */
+@for $i from 1 to 10 {
+  .color#{$i} {
+    color: nth($colors, $i)
+  }
+}
+a {
+  text-decoration: none;
+}
+a:link{
+  color: #000;
+}
+a:visited{
+  color: #000;
+}
+a:hover{
+  color: inherit;
+}
