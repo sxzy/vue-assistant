@@ -2,6 +2,12 @@
 
 > A Vue.js project
 
+#项目介绍
+- 这是一个基于vue的个人使用小助手
+
+## 项目在线demo
+http://kimy.coding.me/vue-assistant/#/
+
 ## Build Setup
 
 ``` bash
