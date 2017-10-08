@@ -3,7 +3,7 @@
 > A Vue.js project
 
 ## 演示
-[看看我的演示吧](https://github.com/sxzy/vue-assistant/blob/master/static/img/test.gif)
+![看看我的演示吧](https://github.com/sxzy/vue-assistant/blob/master/static/img/test.gif)
 ## 项目在线demo(移动端)
 http://kimy.coding.me/vue-assistant/#/
 
