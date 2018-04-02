@@ -3,7 +3,7 @@
 主要实现了几个模块，分别是换肤功能，头像更换，todolist,还有记账功能，同时还有备忘录，当然，如果你是一个选择困难症，还可以让它帮你选择今天吃什么。
 一个十足的date-helper.
 > A Vue.js project
-## 安装，部分电脑安装nodesass经常出错，推荐cnpm安装，请戳 https://npm.taobao.org/
+> 安装，部分电脑安装nodesass经常出错，推荐cnpm安装，请戳 https://npm.taobao.org/
 ## 演示
 ![看看我的演示吧](https://github.com/sxzy/vue-assistant/blob/master/static/img/test.gif)
 ## 项目在线demo(移动端)
