@@ -4,7 +4,7 @@
         <h1 class="myTitle">编辑食物</h1>
       </div>
       <div class="editPart">
-          <input type="text" placeholder="记得吃好穿好长胖胖~~" v-model="editFood" :value="editFood">
+          <input type="text" placeholder="记得吃好穿好长胖胖~~" v-model="editFood" >
       </div>
       <div class="fixBottom spacing confirm slideIn dataPlan">
         <a href="javascript:;" class="weui-btn weui-btn_primary" @click="savechange">确定</a>
